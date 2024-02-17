@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/nutritionaction/" method="get">
+        <label>Name :
+        <input type="text" name ="name" placeholder="name" autocomplete="on" required="">
+        </label>
+        <br>
+        <label>E-mail :
+        <input type="mail" name="email" placeholder="mail" required="" autocomplete="on">
+        </label>
+        <br>
+        <label>Password :
+        <input type="password" name ="password" placeholder="password" required="">
+        </label>
+        <br>
+        <label>Age :
+        <input type="number" name ="age" placeholder="age" required="" min="1" max="100" >
+        </label>
+        <br>
+        <label>contact no:
+            <input type="text" name="contact" required=" " min="13" max="13">
+        </label>
+        <br>
+        <label>Details</label>
+            <textarea required="" name="details">enter the details</textarea>
+        <br>
+        <label>Address
+            <textarea required="" name="address"> enter the address</textarea>
+        </label>
+        <br>
+        <label >
+            <input type="file" name="file" placeholder="upload file" required="">
+        </label>
+        <br>
+        <br><label >Gender</label>
+        <input type="radio" name="gender" value="male" >
+        Male
+        <input type="radio" name="gender" value="female">
+        Female
+        <input type="radio" name="gender" value="other">
+        Others
+        <br>
+        <input type="submit" value="sunmit">
+    </form>
+</body>
+</html>

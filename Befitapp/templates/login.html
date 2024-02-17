@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Befit/login</title>
+  <link rel="stylesheet" href="./login.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--
+Author: Colorlib
+Author URL: https://colorlib.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- //web font -->
+</head>
+<body>
+
+<div class="container">
+<h1><B style="color:black">Be</B><b>Fit</b></h1>
+	<!-- main -->
+	<div class="main-w3layouts wrapper">
+		<h1>LOG<b style="color:black">IN</b></h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form method="POST" autocomplete="on" action="">
+					<input class="text" type="text" name="userID" placeholder="UserID" required="">
+					<br>
+					<input class="text" type="text" name="username" placeholder="Username" required="">
+					<br>
+					<input class="text" type="password" name="password" placeholder="Password" required="">
+					<br>
+					<input class="text" type="text" name="usertype" placeholder="Usertype" required="">
+					
+					<div class="wthree-text">
+						
+						<div class="clear"> </div>
+					</div>
+					<input type="submit" name="SIGNUP"value="SIGNUP" palceholder="submit"  > 
+					<div align="left"><a href="Registration.php">New User? Click here to Register</a></div>
+				
+					
+				</form>
+			</div>
+		</div>
+		
+	
+
+	</div>
+	<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+</div>
+		<!-- //main -->
+	
+</body>
+</html>
+<!-- partial -->
+</body>
+</html>
+
+
+    
+
+<?php
+ session_start();
+ $conn= mysqli_connect('localhost','root','','befit');
+ if($conn->connect_error)
+ {
+     die("connection failed: ".$conn->connect_error);
+ }
+ if($_SERVER["REQUEST_METHOD"]=="POST")
+  {
+ 
+    $user=$_POST['username'];
+    $pass=$_POST['password'];
+    $sql="SELECT * from registration where username='$user' and password='$pass'";
+    $result=mysqli_query($conn,$sql);
+    $row=mysqli_fetch_array($result);
+    if(is_array($row))
+    {
+		$_SESSION["username"]=$row['username'];
+     	header('location:home.php');
+    }
+    else
+    {
+        echo '<script>alert("Wrong password/Username")</script>';
+    }
+}
+ ?>

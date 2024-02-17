@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/medicalaction/" method="get" autocomplete="on"> 
+        <input type="number" name ="age" placeholder="Age">
+        <input type="number" name ="height" placeholder="Height">
+        <input type="number" name ="weight" placeholder="Weigt">
+        <br>
+        <label name="gender">Gender</label>
+        <input type="radio" name="gender" value="male" >
+        Male
+        <input type="radio" name="gender" value="female">
+        Female
+        <input type="radio" name="gender" value="other">
+        Others
+        </br>
+        <label><u>medical details</u>
+            <br>
+            <label>Have any major or minor operation
+             <select name="yes-no">
+                 <option value="yes">yes</option>
+                 <option value="no">No</option>
+             </select>
+            </label>
+            <br>
+            <label name="deabetic">you deabetic patient
+            <input type="checkbox" name="deabetic">Yes
+            <input type="checkbox" name="deabetic">No
+            </label>
+            <br>
+            <label name="bp">
+             Are you bp patient
+             <input type="checkbox" name="bp">Yes
+             <input type="checkbox" name="bp">No
+            </label>
+            <br>
+            <label name="medical">
+             Continous medicine
+             <input type="checkbox" name="medical">Yes
+             <input type="checkbox" name="medical">No
+            </label>
+            <br>
+            <input type="submit" value="Add"
+        </label>
+
+    </form>
+</body>
+</html>
